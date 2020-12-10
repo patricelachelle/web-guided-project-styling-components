@@ -11,5 +11,5 @@ export default function Friend({ info, action }) {
 }
 
 // OUTSIDE of the FRIEND component
-const StyledFriend = styled.div
+const StyledFriend = styled.div``
 
