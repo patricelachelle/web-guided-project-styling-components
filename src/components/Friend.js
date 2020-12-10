@@ -14,6 +14,9 @@ export default function Friend({ info, action }) {
 const StyledFriend = styled.div`
   color: red;
   font-weight: bold;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
 
   &:hover {
     color: green;
