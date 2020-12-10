@@ -36,8 +36,9 @@ const StyledFriend = styled.div`
   button {
     color: ${(pr) => pr.theme.tertiaryColor};
     &:hover {
-      
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
     }
-    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
   }
 `;
