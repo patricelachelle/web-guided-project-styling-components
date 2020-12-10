@@ -35,6 +35,9 @@ const StyledFriend = styled.div`
 
   button {
     color: ${(pr) => pr.theme.tertiaryColor};
-    
+    &:hover {
+      
+    }
+    transform: scale(1.1);
   }
 `;
