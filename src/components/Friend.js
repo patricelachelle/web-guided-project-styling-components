@@ -22,7 +22,9 @@ const StyledFriend = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media ()
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 
   &:hover {
     color: green;
