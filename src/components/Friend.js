@@ -17,12 +17,14 @@ export default function Friend({ info, action, bold }) {
 
 const kf = keyframes`
  100% {
-   
+   opacity: 1;
+   transform: scale(1)
  }
-`
+`;
 
 const StyledFriend = styled.div`
   opacity: 0;
+  animation: ${kf} 3s ease-in-out
   color: ${(pr) => (pr.danger ? pr.theme.primaryColor : pr.theme)};
   font-weight: ${(pr) => (pr.bold ? "bold" : "initial")};
   width: 60%;
