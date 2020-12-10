@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 export default function Friend({ info, action, bold }) {
-  const 
   return (
     <StyledFriend bold={bold} danger={info.name === "Cora"}>
       {info.name}
