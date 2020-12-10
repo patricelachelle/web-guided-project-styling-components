@@ -16,6 +16,7 @@ export default function Friend({ info, action, bold }) {
 // `;
 
 const StyledFriend = styled.div`
+  opacity: 0;
   color: ${(pr) => (pr.danger ? pr.theme.primaryColor : pr.theme)};
   font-weight: ${(pr) => (pr.bold ? "bold" : "initial")};
   width: 60%;
