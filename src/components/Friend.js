@@ -5,15 +5,15 @@ export default function Friend({ info, action }) {
   return (
     <StyledFriend>
       {info.name}
-      <button onClick={() => action(info.id)}>See details</button>
+      <Button onClick={() => action(info.id)}>See details</Button>
     </StyledFriend>
   );
 }
 
 // OUTSIDE of the FRIEND component
 const Button = styled.button`
-
-`
+  color: pink;
+`;
 
 const StyledFriend = styled.div`
   color: red;
