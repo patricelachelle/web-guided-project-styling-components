@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export default function Friend({ info, action, bold }) {
   return (
@@ -14,6 +14,12 @@ export default function Friend({ info, action, bold }) {
 // const Button = styled.button`
 //   color: pink;
 // `;
+
+const kf = keyframes`
+ 100% {
+   
+ }
+`
 
 const StyledFriend = styled.div`
   opacity: 0;
