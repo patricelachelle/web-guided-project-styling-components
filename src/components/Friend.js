@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 export default function Friend({ info, action }) {
   return (
-    <div className="friend">
+    < className="friend">
       {info.name}
       <button onClick={() => action(info.id)}>See details</button>
-    </div>
+    </>
   );
 }
 
 // OUTSIDE of the FRIEND component
 const StyledFriend = styled.div`
-  
-`
-
+  color: red;
+  font-weight: bold;
+`;
