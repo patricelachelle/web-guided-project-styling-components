@@ -32,7 +32,8 @@ const StyledFriend = styled.div`
   justify-content: space-between;
 
   @media (max-width: 550px) {
-    width: 100%;
+    width: ${(pr) => pr.theme.breakpoints.mobile};
+  };
   }
 
   &:hover {
