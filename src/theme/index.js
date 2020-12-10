@@ -4,5 +4,7 @@ export default {
     secondaryColor: 'crimson',
     tertiaryColor: 'mediumseagreen',
     danger: 'orange',
-    black
+    black: 'black',
+    white: 'white',
+    breakpointMobile: "()"
 }
