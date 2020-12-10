@@ -24,7 +24,7 @@ const kf = keyframes`
 
 const StyledFriend = styled.div`
   opacity: 0;
-  animation: ${kf} 3s ease-in-out forwards;
+  animation: ${kf} 3s ease-in-out forwards
   color: ${(pr) => (pr.danger ? pr.theme.primaryColor : pr.theme)};
   font-weight: ${(pr) => (pr.bold ? "bold" : "initial")};
   width: 60%;
@@ -32,8 +32,7 @@ const StyledFriend = styled.div`
   justify-content: space-between;
 
   @media (max-width: 550px) {
-    width: ${(pr) => pr.theme.breakpoints.mobile};
-  };
+    width: 100%;
   }
 
   &:hover {
