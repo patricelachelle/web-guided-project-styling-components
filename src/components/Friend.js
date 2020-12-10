@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Friend({ info, action }) {
+export default function Friend({ info, action, bold }) {
   return (
-    <StyledFriend danger={info.name === "Cora"}>
+    <StyledFriend bold={bold} danger={info.name === "Cora"}>
       {info.name}
       <button onClick={() => action(info.id)}>See details</button>
     </StyledFriend>
@@ -17,7 +17,7 @@ export default function Friend({ info, action }) {
 
 const StyledFriend = styled.div`
   color: ${(pr) => (pr.danger ? pr.theme.primaryColor : pr.theme)};
-  font-weight: bold;
+  font-weight: ${}
   width: 60%;
   display: flex;
   justify-content: space-between;
