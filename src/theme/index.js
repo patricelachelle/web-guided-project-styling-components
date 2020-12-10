@@ -6,5 +6,9 @@ export default {
     danger: 'orange',
     black: 'black',
     white: 'white',
-    breakpointMobile: "()"
+    breakpointMobile: "(max-width: 550px)",
+    breakpoints: {
+        mobile: "(max-width: 550px)",
+        tablet: 
+    }
 }
