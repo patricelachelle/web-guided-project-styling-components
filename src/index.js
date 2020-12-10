@@ -8,13 +8,13 @@ import { ThemeProvider } from "styled-components";
 
 import App from "./components/App";
 
-import themes from './index'
+import theme from "./theme";
 
 import "./styles.css";
 
 render(
-  <ThemeProvider>
-    <App /> 
+  <ThemeProvider theme={theme}>
+    <App />
   </ThemeProvider>,
   document.querySelector("#root")
 );
