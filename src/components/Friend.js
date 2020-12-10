@@ -11,6 +11,10 @@ export default function Friend({ info, action }) {
 }
 
 // OUTSIDE of the FRIEND component
+const Button = styled.button`
+
+`
+
 const StyledFriend = styled.div`
   color: red;
   font-weight: bold;
