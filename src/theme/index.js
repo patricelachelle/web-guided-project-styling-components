@@ -9,6 +9,10 @@ export default {
     breakpointMobile: "(max-width: 550px)",
     breakpoints: {
         mobile: "(max-width: 550px)",
-        tablet: 
+        tablet: "(max-width: 800px)",
+    },
+    padding: {
+        small: "8px",
+        medium: "8px"
     }
 }
