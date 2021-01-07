@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
 import axios from 'axios'
+import styled from 'styled-components'
+import { FriendContainer } from './Friend'
 
 export default function Details(props) {
   const { friendId, close } = props
@@ -13,7 +15,7 @@ export default function Details(props) {
   }, [friendId])
 
   return (
-    <div className='container'>
+    <DetailsContainer className='container'>
       <h2>Details:</h2>
       {
         details &&
@@ -29,6 +31,10 @@ export default function Details(props) {
         </>
       }
       <button onClick={close}>Close</button>
-    </div>
+    </DetailsContainer>
   )
 }
+
+const DetailsContainer = styled(FriendContainer)`
+  display: block;
+`

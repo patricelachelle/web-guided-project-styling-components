@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 import { BASE_URL, API_KEY } from '../constants'
 import Details from './Details'
-import Friend from './Friend'
+import { Friend } from './Friend'
 
 export default function App() {
   const [friends, setFriends] = useState([])
@@ -40,3 +41,12 @@ export default function App() {
     </div>
   )
 }
+
+// const Container = styled.div`
+//   background-color: cornsilk
+// `
+
+// const Button = styled.button`
+//   background-color: ${props => props.primary ? 'pink' : 'black'};
+//   color: white;
+// `
