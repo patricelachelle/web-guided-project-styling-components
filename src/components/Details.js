@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
 import axios from 'axios'
+import styled from 'styled-components'
+
+import { Container } from './styled/Container'
 
 export default function Details(props) {
   const { friendId, close } = props
@@ -13,7 +16,7 @@ export default function Details(props) {
   }, [friendId])
 
   return (
-    <div className='container'>
+    <DetailsContainer>
       <h2>Details:</h2>
       {
         details &&
@@ -28,7 +31,23 @@ export default function Details(props) {
           </ul>
         </>
       }
-      <button onClick={close}>Close</button>
-    </div>
+      <Button onClick={close}>Close</Button>
+      <Button type="danger">Delete</Button>
+      <Button type="warning">Edit</Button>
+    </DetailsContainer>
   )
 }
+
+const Button = styled.button`
+width: 75px;
+height:75px;
+margin: 5px;
+${props => props.type === "danger" && `background: #fa5e5e`}
+${props => props.type === "warning" && `background: #ffffae`}
+
+`
+
+const DetailsContainer = styled(Container)`
+width: 300px;
+height: 400px;
+`
