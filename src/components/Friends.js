@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
 import { BASE_URL, API_KEY } from '../constants'
+
 import Details from './Details'
 import Friend from './Friend'
+import { Container } from './styled/Container'
 
-export default function App() {
+export default function Friends() {
   const [friends, setFriends] = useState([])
   const [currentFriendId, setCurrentFriendId] = useState('1')
 
@@ -27,7 +31,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className='container'>
+    <Container>
       <h1>My friends:</h1>
       {
         friends.map(fr => {
@@ -37,6 +41,6 @@ export default function App() {
       {
         currentFriendId && <Details friendId={currentFriendId} close={closeDetails} />
       }
-    </div>
+    </Container>
   )
 }
