@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
 import axios from 'axios'
+import styled from 'styled-components'
 
 export default function Details(props) {
   const { friendId, close } = props
@@ -28,7 +29,17 @@ export default function Details(props) {
           </ul>
         </>
       }
-      <button onClick={close}>Close</button>
+      <LargeButton theme="" onClick={close}>Close</LargeButton>
+      <Button theme="danger">Delete</Button>
     </div>
   )
 }
+
+const Button = styled.button`
+margin: 5px;
+background-color: ${props => props.theme == "danger" ? "red" : "white"};
+color: ${props => props.theme == "danger" ? "white" : "black"}
+`
+const LargeButton = styled(Button)`
+width: 75px;
+`

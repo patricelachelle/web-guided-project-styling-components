@@ -3,6 +3,7 @@ import axios from 'axios'
 import { BASE_URL, API_KEY } from '../constants'
 import Details from './Details'
 import Friend from './Friend'
+import styled from 'styled-components';
 
 export default function App() {
   const [friends, setFriends] = useState([])
@@ -27,7 +28,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className='container'>
+    <Container className='container'>
       <h1>My friends:</h1>
       {
         friends.map(fr => {
@@ -37,6 +38,14 @@ export default function App() {
       {
         currentFriendId && <Details friendId={currentFriendId} close={closeDetails} />
       }
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+display: flex;
+justify-content; center;
+align-items: center;
+flex-direction: column;
+background-color: ${props => props.theme.backgroundColor};
+`
