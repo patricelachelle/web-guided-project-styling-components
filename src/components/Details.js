@@ -14,6 +14,8 @@ const StyledDetails = styled.div`
   opacity: 0;
   transform: scale(2) rotateZ(180deg);
   animation: ${kf} 1s ease-in-out forwards;
+  background-color: ${({theme}) => theme.primaryColor};
+  color: ${props => props.theme.white};
   border: 1px solid #d2d2d2;
   box-shadow: 0px 1px 6px -2px #807f7f;
   border-radius: 8px;
