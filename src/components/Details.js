@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
 import axios from 'axios'
+import styled from "style-components"
 
 export default function Details(props) {
   const { friendId, close } = props
@@ -13,7 +14,7 @@ export default function Details(props) {
   }, [friendId])
 
   return (
-    <div className='container'>
+    <Container primary>
       <h2>Details:</h2>
       {
         details &&
@@ -29,6 +30,15 @@ export default function Details(props) {
         </>
       }
       <button onClick={close}>Close</button>
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+background-color: ${props => props.primary ? 'pink' : 'papayawhip'}
+display: flex;
+justify-content: center;
+align-items: center;
+flex-directions: column;
+margin: 15px;
+`
